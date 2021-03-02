@@ -1,1 +1,1 @@
-# OOP20-tallisman-csharp-task
+# OOP20-talisman-csharp-task
