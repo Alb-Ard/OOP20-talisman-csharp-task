@@ -2,6 +2,6 @@
 {
     public interface IInventoryModel
     {
-        
+        void AddCard(Card card);
     }
 }

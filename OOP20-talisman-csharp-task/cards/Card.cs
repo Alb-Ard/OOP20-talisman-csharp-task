@@ -1,6 +1,6 @@
 ﻿namespace DefaultNamespace
 {
-    public class Card
+    public class Card : ICard
     {
         
     }
