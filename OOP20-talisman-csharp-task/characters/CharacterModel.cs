@@ -1,4 +1,6 @@
-﻿namespace TalismanCSHARP
+﻿using TalismanCSHARP.characters.defaultcharacters;
+
+namespace TalismanCSHARP.characters
 {
     public class CharacterModel : ICharacterModel
     {
@@ -8,13 +10,17 @@
         private int _fate;
         private int _gold;
 
-        public CharacterModel(in int health, in int strength, in int craft, in int fate, in int gold)
+        private readonly InventoryModel _inventory = new InventoryModel();
+        private readonly CharacterType _type;
+
+        public CharacterModel(in int health, in int strength, in int craft, in int fate, in int gold, in CharacterType type)
         {
             _health = health;
             _strength = strength;
             _craft = craft;
             _fate = fate;
             _gold = gold;
+            _type = type;
         }
         
         public ref int GetHealth()
@@ -65,6 +71,24 @@
         public void SetGold(in int value)
         {
             _gold = value;
+        }
+
+        /// <summary>
+        /// Returns the instance of the character's inventory
+        /// </summary>
+        /// <returns>the instance of the inventory</returns>
+        public InventoryModel GetInventory()
+        {
+            return _inventory;
+        }
+
+        /// <summary>
+        /// Returns the the type of the base character
+        /// </summary>
+        /// <returns>the character's type</returns>
+        public new CharacterType GetType()
+        {
+            return _type;
         }
     }
 }
