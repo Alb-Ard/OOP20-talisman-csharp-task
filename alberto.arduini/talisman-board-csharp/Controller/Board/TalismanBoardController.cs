@@ -11,11 +11,11 @@ using Talisman.View.Board;
 
 namespace Talisman.Controller.Board
 {
-    public class TalismanBoardController : PopulatedBoardController<TalismanBoard, TalismanBoardSection, TalismanBoardCell, TalismanBoardPawn>, ITalismanBoardController
+    public class TalismanBoardController : PopulatedBoardController<ITalismanBoard, TalismanBoardSection, TalismanBoardCell, TalismanBoardPawn>, ITalismanBoardController
     {
         public event Action ActionEnded;
 
-        public TalismanBoardController(TalismanBoard board, IBoardView view) : base(board, view)
+        public TalismanBoardController(ITalismanBoard board, IBoardView view) : base(board, view)
         {
             for (int i = 0; i < Board.SectionsCount; i++)
             {

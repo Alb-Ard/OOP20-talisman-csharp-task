@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Talisman.Model.Board;
+using Talisman.View.Board;
 
 namespace Talisman.Controller.Board
 {
@@ -44,6 +45,20 @@ namespace Talisman.Controller.Board
                 if (controller.GetCharacterPawn(i).PositionCell == cell && controller.GetCharacterPawn(i).PositionSection == section)
                     result.Add(controller.GetCharacterPawn(i).Index);
             return result;
+        }
+    }
+
+    /// <summary>
+    /// Since tdefault methods are available
+    /// only from newer C# versions, this is needed
+    /// to replace the factory method in the interface
+    /// </summary>
+    public static class PopulatedBoardControllerFactory
+    {
+        public static IPopulatedBoardController<B, S, C, P> Create<B, S, C, P>(B model, IBoardView view)
+            where B : IPopulatedBoard<S, C, P> where S : IBoardSection<C> where C : IBoardCell where P: IBoardPawn
+        {
+            return new PopulatedBoardController<B, S, C, P>(model, view);
         }
     }
 }
