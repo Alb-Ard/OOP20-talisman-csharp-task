@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalismanCSHARP", "TalismanCSHARP.csproj", "{D053D7B0-CCC8-4F47-ABEE-7078AE0E9BEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP20-talisman-csharp-task", "OOP20-talisman-csharp-task\OOP20-talisman-csharp-task.csproj", "{D053D7B0-CCC8-4F47-ABEE-7078AE0E9BEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

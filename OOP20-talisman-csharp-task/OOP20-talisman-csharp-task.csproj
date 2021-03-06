@@ -38,12 +38,16 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="cards\Card.cs" />
+        <Compile Include="cards\ICard.cs" />
         <Compile Include="characters\CharacterModel.cs" />
         <Compile Include="characters\defaultcharacters\Assassin.cs" />
         <Compile Include="characters\defaultcharacters\CharacterType.cs" />
         <Compile Include="characters\defaultcharacters\IDefaultCharacter.cs" />
+        <Compile Include="characters\exceptions\NotEnoughSpaceInventoryException.cs" />
         <Compile Include="characters\ICharacterModel.cs" />
         <Compile Include="characters\IInventoryModel.cs" />
+        <Compile Include="characters\InventoryModel.cs" />
         <Compile Include="characters\IPlayerModel.cs" />
         <Compile Include="characters\PlayerModel.cs" />
         <Compile Include="Program.cs" />
