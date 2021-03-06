@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace
+﻿namespace TalismanCSHARP.cards
 {
     public interface ICard
     {
