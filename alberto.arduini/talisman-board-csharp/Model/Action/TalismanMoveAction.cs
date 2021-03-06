@@ -6,14 +6,19 @@ using System.Threading.Tasks;
 
 namespace Talisman.Model.Action
 {
-    public class TalismanMoveAction : ITalismanAction
+    public class TalismanMoveAction : TalismanAction
     {
-        public event System.Action OnApplied;
+        private static readonly string[] SectionNames = new string[]
+        {
+            "Outer",
+            "Middle",
+            "Inner",
+            "Crown",
+        };
 
-        private Tuple<int, int> destination;
+        private readonly Tuple<int, int> destination;
 
-        public string Description => "Skip your turn.";
-        public bool CanBeApplied => true;
+        public override string Description => $"Move to cell {Cell} in the {SectionNames[Section]} section";
         public int Section => destination.Item1;
         public int Cell => destination.Item2;
 
@@ -22,8 +27,10 @@ namespace Talisman.Model.Action
             destination = new Tuple<int, int>(section, cell);
         }
 
-        public void Apply()
+        public override void Apply()
         {
+            Controllers.BoardController.MoveCharacterSection(Controllers.CharacterController.CurrentPlayer, destination.Item1, destination.Item2);
+            base.Apply();
         }
     }
 }

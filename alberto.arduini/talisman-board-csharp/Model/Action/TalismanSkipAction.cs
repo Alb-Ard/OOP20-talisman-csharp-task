@@ -6,16 +6,8 @@ using System.Threading.Tasks;
 
 namespace Talisman.Model.Action
 {
-    public class TalismanSkipAction : ITalismanAction
+    public class TalismanSkipAction : TalismanAction
     {
-        public event System.Action OnApplied;
-
-        public string Description => "Skip your turn.";
-
-        public void Apply()
-        {
-        }
-
-        public bool CanBeApplied => true;
+        public override string Description => "Skip your turn.";
     }
 }
