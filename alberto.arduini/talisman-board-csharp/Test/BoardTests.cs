@@ -12,6 +12,10 @@ using Talisman.Model.Board;
 
 namespace Talisman.Test
 {
+
+    /// <summary>
+    /// NOTE: Tests are done using MSTest V2
+    /// </summary>
     [TestClass]
     public class BoardTests
     {
