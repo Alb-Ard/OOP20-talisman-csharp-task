@@ -39,7 +39,7 @@ namespace Talisman.Model.Board
 
         public void ChangePawnSection(int player, int section)
         {
-            ChangePawnSection(player, section, GetPawn(player).PositionCell);
+            ChangePawnSection(player, section, 0);
         }
 
         public void ChangePawnSection(int player, int section, int cell)

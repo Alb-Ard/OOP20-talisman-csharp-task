@@ -33,12 +33,12 @@ namespace Talisman.Controller.Board
 
         public void MoveCharacterCell(int player, int cell)
         {
-            MoveCharacterSection(player, GetCharacterPawn(player).PositionSection, cell);
+            Board.MovePawnTo(player, cell);
         }
 
         public void MoveCharacterSection(int player, int section)
         {
-            MoveCharacterSection(player, section, GetCharacterPawn(player).PositionCell);
+            Board.ChangePawnSection(player, section);
         }
 
         public void MoveCharacterSection(int player, int section, int cell)
