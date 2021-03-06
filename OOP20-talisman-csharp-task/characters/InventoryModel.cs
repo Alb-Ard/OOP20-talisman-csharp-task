@@ -7,27 +7,27 @@ namespace TalismanCSHARP.characters
 {
     public class InventoryModel : IInventoryModel
     {
-        private List<Card> cards = new List<Card>();
+        private List<Card> _cards = new List<Card>();
         
         public void AddCard(ref Card card)
         {
-            if (Size() < 4) cards.Add(card);
+            if (Size() < 4) _cards.Add(card);
             else throw new NotEnoughSpaceInventoryException();
         }
 
         public void RemoveCard(ref int index)
         {
-            cards.RemoveAt(index);
+            _cards.RemoveAt(index);
         }
 
         public void RemoveCard(ref Card card)
         {
-            cards.Remove(card);
+            _cards.Remove(card);
         }
 
         public ref List<Card> ListCards()
         {
-            return ref cards;
+            return ref _cards;
         }
 
         public bool HasMule()
@@ -37,7 +37,7 @@ namespace TalismanCSHARP.characters
 
         public int Size()
         {
-            return cards.Count;
+            return _cards.Count;
         }
     }
 }
