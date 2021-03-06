@@ -15,8 +15,8 @@ namespace Talisman.Model.Board
 
         public string ImagePath => imagePath;
         public int Index => index;
-        public int PositionCell => position.Item1;
-        public int PositionSection => position.Item2;
+        public int PositionCell => position.Item2;
+        public int PositionSection => position.Item1;
 
         public TalismanBoardPawn(int index, string imagePath)
         {
