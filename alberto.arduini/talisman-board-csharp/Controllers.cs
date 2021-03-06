@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Talisman.Controller.Board;
 using Talisman.Controller.Character;
+using Talisman.Controller.Card;
 using Talisman.Model.Card;
 
 namespace Talisman
@@ -12,7 +14,6 @@ namespace Talisman
     public static class Controllers
     {
         private static ITalismanBoardController boardController;
-        private static Dictionary<DeckType, IDeckController> deckControllers = new Dictionary<DeckType, IDeckController>();
         private static ICharactersController characterController;
 
         public static ITalismanBoardController BoardController 
@@ -20,7 +21,7 @@ namespace Talisman
             get => boardController; 
             set => boardController = boardController == null ? value : throw new ArgumentException("Controller already set");
         }
-        public static Dictionary<DeckType, IDeckController> DeckControllers { get => deckControllers; }
+        public static Dictionary<DeckType, IDeckController> DeckControllers { get; } = new Dictionary<DeckType, IDeckController>();
         public static ICharactersController CharacterController 
         {
             get => characterController; 
@@ -29,16 +30,16 @@ namespace Talisman
 
         public static void SetDeckController(DeckType type, IDeckController controller)
         {
-            if (deckControllers.ContainsKey(type))
+            if (DeckControllers.ContainsKey(type))
                 throw new ArgumentException("Controller already set");
-            deckControllers.Add(type, controller);
+            DeckControllers.Add(type, controller);
         }
 
         public static void Reset()
         {
             boardController = null;
             characterController = null;
-            deckControllers.Clear();
+            DeckControllers.Clear();
         }
     }
 }
