@@ -1,4 +1,4 @@
-﻿namespace TalismanCSHARP
+﻿namespace TalismanCSHARP.characters
 {
     public interface IPlayerModel
     {

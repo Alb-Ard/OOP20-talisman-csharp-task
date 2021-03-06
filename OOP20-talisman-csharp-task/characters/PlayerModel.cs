@@ -1,4 +1,6 @@
-﻿namespace TalismanCSHARP
+﻿using TalismanCSHARP.characters;
+
+namespace TalismanCSHARP
 {
     public class PlayerModel : IPlayerModel
     {
