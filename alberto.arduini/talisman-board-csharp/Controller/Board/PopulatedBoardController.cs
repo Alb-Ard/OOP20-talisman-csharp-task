@@ -31,6 +31,16 @@ namespace Talisman.Controller.Board
             return Board[GetCharacterPawn(player).PositionSection];
         }
 
+        public void MoveCharacterCell(int player, int cell)
+        {
+            MoveCharacterSection(player, GetCharacterPawn(player).PositionSection, cell);
+        }
+
+        public void MoveCharacterSection(int player, int section)
+        {
+            MoveCharacterSection(player, section, GetCharacterPawn(player).PositionCell);
+        }
+
         public void MoveCharacterSection(int player, int section, int cell)
         {
             Board.ChangePawnSection(player, section, cell);
