@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Alice_Girolomini
 {
-    /// <summary>Enum type that specifies if the player needs one or two dices</summary>
+    /// <summary>Enum that specifies if the player needs one or two dices</summary>
     public enum DiceType { SIX = 6, DOUBLE_SIX = 12 }
 
     static class DiceExtension

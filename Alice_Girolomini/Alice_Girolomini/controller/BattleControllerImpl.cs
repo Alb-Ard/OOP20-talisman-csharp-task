@@ -36,7 +36,7 @@ namespace Alice_Girolomini
             }
         }
 
-        /// <summary></summary>Checks which character is fighting.
+        /// <summary>Checks which character is fighting.</summary>
         private ICharacterModel CheckTurn()
         {
             if (this.turn == FIRSTTURN)
