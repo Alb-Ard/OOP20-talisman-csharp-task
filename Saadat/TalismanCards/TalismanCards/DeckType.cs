@@ -1,6 +1,6 @@
 ﻿namespace TalismanCards
 {
-    enum DeckType
+    public enum DeckType
     {
         ADVENTURE, SPELL, SHOP, TALISMAN
     }

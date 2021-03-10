@@ -12,6 +12,6 @@ namespace TalismanCards
         int NumberOfCards { get; }
         DeckType Type { get; }
         void Shuffle();
-        IList<Card> Cards { get; }
+        Queue<Card> Cards { get; }
     }
 }
