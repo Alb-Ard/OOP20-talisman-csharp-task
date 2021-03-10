@@ -10,6 +10,9 @@ namespace TalismanCards
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine(TalismanDeckFactory.CreateDeck(DeckType.ADVENTURE));
+            Console.In.Read();
         }
     }
 }
