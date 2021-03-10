@@ -1,6 +1,6 @@
-﻿namespace TalismanCards
+﻿namespace TalismanCards.actions
 {
-    interface ITalismanAction
+    public interface ITalismanAction
     {
     }
 }
