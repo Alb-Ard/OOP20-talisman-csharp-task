@@ -1,4 +1,4 @@
-﻿namespace TalismanCards
+﻿namespace TalismanCards.Actions
 {
     public enum TalismanActionStatistic
     {

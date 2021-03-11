@@ -1,6 +1,6 @@
-﻿namespace TalismanCards
+﻿namespace TalismanCards.Actions
 {
-    internal class TalismanModifyStatisticAction
+    internal class TalismanModifyStatisticAction:ITalismanAction
     {
         private int v;
         private object cRAFT;

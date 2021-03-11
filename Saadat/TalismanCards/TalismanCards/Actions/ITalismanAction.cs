@@ -1,4 +1,4 @@
-﻿namespace TalismanCards.actions
+﻿namespace TalismanCards.Actions
 {
     public interface ITalismanAction
     {

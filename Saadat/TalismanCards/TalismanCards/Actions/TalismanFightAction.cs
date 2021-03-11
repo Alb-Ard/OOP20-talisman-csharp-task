@@ -1,4 +1,4 @@
-﻿namespace TalismanCards.actions
+﻿namespace TalismanCards.Actions
 {
     internal class TalismanFightAction:ITalismanAction
     {
