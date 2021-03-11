@@ -29,6 +29,13 @@ namespace TalismanCardsTest
             int actual = TalismanDeckFactory.CreateDeck(DeckType.SHOP).NumberOfCards;
             Assert.AreEqual(expected, actual);
         }
-
+        [TestMethod]
+        public void CardDraw()
+        {
+            Deck deck = TalismanDeckFactory.CreateDeck(DeckType.ADVENTURE);
+            var oldncards = deck.NumberOfCards;
+            deck.Draw();
+            Assert.AreEqual(oldncards - 1, deck.NumberOfCards);
+        }
     }
 }
