@@ -41,8 +41,15 @@
         <Compile Include="cards\Card.cs" />
         <Compile Include="cards\ICard.cs" />
         <Compile Include="characters\CharacterModel.cs" />
+        <Compile Include="characters\controllers\CharacterController.cs" />
+        <Compile Include="characters\controllers\ICharacterController.cs" />
         <Compile Include="characters\defaultcharacters\Assassin.cs" />
         <Compile Include="characters\defaultcharacters\CharacterType.cs" />
+        <Compile Include="characters\defaultcharacters\DefaultCharacterFactory.cs" />
+        <Compile Include="characters\defaultcharacters\Druid.cs" />
+        <Compile Include="characters\defaultcharacters\Dwarf.cs" />
+        <Compile Include="characters\defaultcharacters\Elf.cs" />
+        <Compile Include="characters\defaultcharacters\Ghoul.cs" />
         <Compile Include="characters\defaultcharacters\IDefaultCharacter.cs" />
         <Compile Include="characters\exceptions\NotEnoughSpaceInventoryException.cs" />
         <Compile Include="characters\ICharacterModel.cs" />
@@ -52,6 +59,12 @@
         <Compile Include="characters\PlayerModel.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="quests\DeliverObject.cs" />
+        <Compile Include="quests\exceptions\NoActiveQuestException.cs" />
+        <Compile Include="quests\KillEnemy.cs" />
+        <Compile Include="quests\QuestObjectType.cs" />
+        <Compile Include="quests\TakePlayerLife.cs" />
+        <Compile Include="quests\TalismanQuest.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

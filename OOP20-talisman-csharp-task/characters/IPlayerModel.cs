@@ -1,4 +1,6 @@
-﻿namespace TalismanCSHARP.characters
+﻿using TalismanCSHARP.quests;
+
+namespace TalismanCSHARP.characters
 {
     public interface IPlayerModel
     {
@@ -12,11 +14,9 @@
 
         void SetCrownPlayer();
 
-        void GiveTalismanQuest(); //TODO Add Quest
+        void GiveTalismanQuest(TalismanQuest quest);
 
         void ResolveActiveQuest();
-        
-        //TODO get current quest
 
         bool HasQuest();
 

@@ -1,10 +1,10 @@
 ﻿namespace TalismanCSHARP.characters.defaultcharacters
 {
-    public class Assassin : IDefaultCharacter
+    public class Druid : IDefaultCharacter
     {
         public new CharacterType GetType()
         {
-            return CharacterType.Assassin;
+            return CharacterType.Druid;
         }
 
         public string[] GetLore()
@@ -32,4 +32,5 @@
             return 3;
         }
     }
+    
 }

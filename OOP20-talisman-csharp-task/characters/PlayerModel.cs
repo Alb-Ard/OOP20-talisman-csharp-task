@@ -1,4 +1,6 @@
 ﻿using TalismanCSHARP.characters;
+using TalismanCSHARP.quests;
+using TalismanCSHARP.quests.exceptions;
 
 namespace TalismanCSHARP
 {
@@ -6,7 +8,7 @@ namespace TalismanCSHARP
     {
         private int _id;
         private CharacterModel _currentCharacter;
-        //private TalismanQuest _currentQuest;
+        private TalismanQuest _currentQuest;
         private bool _crown;
         private bool _talisman;
 
@@ -16,7 +18,7 @@ namespace TalismanCSHARP
             _currentCharacter = character;
             _crown = false;
             _talisman = false;
-            //_currentQuest = null;
+            _currentQuest = null;
         }
         
         public ref int GetIndex()
@@ -44,19 +46,32 @@ namespace TalismanCSHARP
             _crown = true;
         }
 
-        public void GiveTalismanQuest()
+        public void GiveTalismanQuest(TalismanQuest quest)
         {
-            throw new System.NotImplementedException();
+            _currentQuest = quest;
         }
 
         public void ResolveActiveQuest()
         {
-            throw new System.NotImplementedException();
+            if (HasQuest()){
+
+                _currentCharacter = null;
+                _talisman = true;
+
+                //Resolving quest with external code
+                //
+                //int index = Controllers.getCharactersController().getCurrentPlayer().getIndex();
+                //Controllers.getBoardController().moveCharacterSection(index, 1, 8);
+
+            } else {
+
+                throw new NoActiveQuestException("player n. " + _id + " doesn't have an active quest");
+            }
         }
 
         public bool HasQuest()
         {
-            throw new System.NotImplementedException();
+            return _currentQuest != null;
         }
 
         public bool HasCrown()

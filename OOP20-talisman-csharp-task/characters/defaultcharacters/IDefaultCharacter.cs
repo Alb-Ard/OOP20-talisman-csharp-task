@@ -2,7 +2,7 @@
 {
     public interface IDefaultCharacter
     {
-       string GetType();
+       CharacterType GetType();
 
        string[] GetLore();
 
