@@ -28,8 +28,8 @@ namespace TalismanCards
 
         public void Shuffle()
         {
-            //TODO 
-           //cards.OrderBy
+            var rnd = new Random();
+            cards.OrderBy(card => rnd.Next());
         }
     }
 }

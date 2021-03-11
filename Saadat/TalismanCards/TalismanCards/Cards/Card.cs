@@ -20,41 +20,16 @@ namespace TalismanCards
             this.type = type;
             this.actions = actions;
         }
-        
 
-        
-        public string Name
-        {
-            get 
-            { 
-                return name;
-            }
-        }
+        public string Name => name;
 
-        public string Text
-        {
-            get 
-            { 
-                return text; 
-            }
-        }
+        public string Text => text;
 
-        public string ImagePath 
-        { 
-            get 
-            { 
-                return imagepath;
-            } 
-        }
+        public string ImagePath => imagepath;
 
-        public CardType Type
-        {
-            get 
-            { 
-                return type;
-            }
-        }
-        public static Card createCard( String name,  String text,  String imagepath,  CardType type,  IEnumerable<ITalismanAction> actions)
+        public CardType Type => type;
+
+        public static Card createCard(String name, String text, String imagepath, CardType type, IEnumerable<ITalismanAction> actions)
         {
             return new Card(name, text, imagepath, type, actions);
         }
