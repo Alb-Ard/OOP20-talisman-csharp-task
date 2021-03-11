@@ -29,7 +29,7 @@ namespace TalismanCards
         public void Shuffle()
         {
             var rnd = new Random();
-            cards.OrderBy(card => rnd.Next());
+            cards = new Queue<Card>(cards.OrderBy(card => rnd.Next()));
         }
     }
 }
