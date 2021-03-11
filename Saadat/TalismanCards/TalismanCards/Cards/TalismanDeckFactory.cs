@@ -10,9 +10,6 @@ namespace TalismanCards
 {
     public class TalismanDeckFactory
     {
-        /**
-         * String used to identify a Talisman object.
-         */
         public static String TALISMAN = "Talisman";
         public static int CARDMULTIPLIER = 4;
         public static Deck CreateDeck( DeckType type)

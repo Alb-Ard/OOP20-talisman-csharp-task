@@ -10,9 +10,12 @@ namespace TalismanCards
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine(TalismanDeckFactory.CreateDeck(DeckType.ADVENTURE));
-            Console.In.Read();
+            // Il main del programma pesca una carta da un deck mischiato e mostra i valori della carta, a scopo di test aggiuntivo oltre a quelli di MSTest.
+            var deck = TalismanDeckFactory.CreateDeck(DeckType.ADVENTURE);
+            deck.Shuffle();
+            var card = deck.Draw();
+            Console.WriteLine(card.Name + "\n" + card.Text + "\n" + card.Type + "\n" + card.ImagePath);
+            Console.ReadLine();
         }
     }
 }
