@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TalismanCards;
 
@@ -36,6 +38,14 @@ namespace TalismanCardsTest
             var oldncards = deck.NumberOfCards;
             deck.Draw();
             Assert.AreEqual(oldncards - 1, deck.NumberOfCards);
+        }
+        [TestMethod]
+        public void DeckShuffle()
+        {
+            Deck deck = TalismanDeckFactory.CreateDeck(DeckType.ADVENTURE);
+            var oldcards = deck.Cards;
+            deck.Shuffle();
+            Assert.IsFalse(oldcards.SequenceEqual(deck.Cards));
         }
     }
 }
